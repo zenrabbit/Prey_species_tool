@@ -8,7 +8,7 @@ prey <- read_csv("tidy_prey.csv") %>%
   distinct()
 
 ui <- basicPage(
-  h2("Prey"),
+  h2("Prey item query tool for Central California listed vertebrates"),
   DT::dataTableOutput("mytable")
 )
 
