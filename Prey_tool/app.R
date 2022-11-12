@@ -10,6 +10,11 @@ prey <- read_csv("tidy_prey.csv") %>%
 shinyApp(
   ui = fluidPage(
     h3("Prey item query tool for Central California listed vertebrate species"),
+    tags$a(
+      "Data from KNB",
+      target = "_blank",
+      href = "https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1NG4P39"
+    ),
     fluidRow(
       column(12,
              dataTableOutput('table')
@@ -18,5 +23,7 @@ shinyApp(
   ),
   server = function(input, output) {
     output$table <- renderDataTable(prey)
+    
+    
   }
 )
