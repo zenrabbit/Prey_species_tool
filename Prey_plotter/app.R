@@ -13,7 +13,7 @@ prey <- read_csv("tidy_prey.csv") %>%
 ui <- fluidPage(    
   
   # Give the page a title
-  titlePanel("Prey item query tool for Central California listed vertebrates"),
+  titlePanel("Prey items for Central California listed vertebrates"),
   
   # Generate a row with a sidebar
   sidebarLayout(      
